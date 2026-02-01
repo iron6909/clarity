@@ -25,6 +25,7 @@ tmp/
 
 # Claude Code
 .claude/
+.mcp.json
 
 # Hugo
 .hugo_build.lock
