@@ -971,6 +971,35 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 		overflow-y: visible;
 		margin-bottom: 24px;
 	}
+
+	/* Fix content overflow on tablets */
+	.post__content,
+	.content {
+		max-width: 100%;
+		overflow-x: auto;
+		word-wrap: break-word;
+	}
+
+	/* Fix code block overflow on tablets */
+	pre {
+		max-width: 100%;
+		overflow-x: auto;
+		word-break: break-word;
+		white-space: pre-wrap;
+	}
+
+	/* Fix inline code overflow */
+	code {
+		word-break: break-word;
+	}
+
+	/* Fix table overflow on tablets */
+	table {
+		display: block;
+		overflow-x: auto;
+		max-width: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 /* Author Box */
@@ -1400,6 +1429,36 @@ textarea {
 	.sidebar {
 		margin-top: 24px;
 	}
+
+	/* Fix content overflow on mobile */
+	.post__content,
+	.content {
+		max-width: 100%;
+		overflow-x: auto;
+		word-wrap: break-word;
+	}
+
+	/* Fix code block overflow on mobile */
+	pre {
+		max-width: 100%;
+		overflow-x: auto;
+		word-break: break-word;
+		white-space: pre-wrap;
+		font-size: 14px;
+	}
+
+	/* Fix inline code overflow on mobile */
+	code {
+		word-break: break-word;
+	}
+
+	/* Fix table overflow on mobile */
+	table {
+		display: block;
+		overflow-x: auto;
+		max-width: 100%;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 @media screen and (max-width: 620px) {
@@ -1468,6 +1527,19 @@ textarea {
 		display: block;
 		font-size: 12px;
 		font-size: .75rem;
+	}
+
+	/* Ensure content fits on small screens */
+	.post__content,
+	.content {
+		overflow-x: auto;
+	}
+
+	/* Ensure code blocks fit on small screens */
+	pre {
+		max-width: 100%;
+		overflow-x: auto;
+		white-space: pre-wrap;
 	}
 }
 
