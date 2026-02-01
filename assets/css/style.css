@@ -902,6 +902,69 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	outline-offset: -2px;
 }
 
+/* Post Container with Sidebar TOC */
+.post-container {
+	display: flex;
+	gap: 32px;
+	align-items: flex-start;
+}
+
+.post--with-sidebar {
+	flex: 1;
+	min-width: 0;
+}
+
+.post__toc-sidebar {
+	flex: 0 0 280px;
+	order: 2;
+}
+
+.toc--sticky {
+	position: sticky;
+	top: 32px;
+	max-height: calc(100vh - 64px);
+	overflow-y: auto;
+	margin-bottom: 0;
+}
+
+.toc--sticky::-webkit-scrollbar {
+	width: 6px;
+}
+
+.toc--sticky::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.toc--sticky::-webkit-scrollbar-thumb {
+	background: var(--color-border);
+	border-radius: 3px;
+}
+
+.toc--sticky::-webkit-scrollbar-thumb:hover {
+	background: var(--color-text-secondary);
+}
+
+/* Responsive: Hide sidebar TOC on smaller screens */
+@media screen and (max-width: 1023px) {
+	.post-container {
+		flex-direction: column;
+	}
+
+	.post__toc-sidebar {
+		flex: 1 1 auto;
+		order: -1;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	.toc--sticky {
+		position: static;
+		max-height: none;
+		overflow-y: visible;
+		margin-bottom: 24px;
+	}
+}
+
 /* Author Box */
 .authorbox {
 	padding: 32px 0;
