@@ -4,6 +4,7 @@
   "description": "Clarity is a modern, responsive Hugo theme with automatic dark mode support. Based on Mainroad.",
   "license": "GPL-2.0",
   "devDependencies": {
+    "@playwright/test": "^1.58.1",
     "autoprefixer": "^10.4.16",
     "editorconfig-checker": "^5.1.1",
     "eslint": "^8.52.0",
@@ -23,7 +24,10 @@
     "fix:css": "stylelint static/css/*.css --aei --fix",
     "fix:js": "eslint static/js/*.js --fix",
     "fix": "npm run fix:prefixes && npm run fix:css && npm run fix:js",
-    "test": "npm run lint"
+    "test": "npm run lint",
+    "test:e2e": "npx playwright test",
+    "test:e2e:ui": "npx playwright test --ui",
+    "test:e2e:debug": "npx playwright test --debug"
   },
   "repository": {
     "type": "git",

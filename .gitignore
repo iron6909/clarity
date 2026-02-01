@@ -29,3 +29,8 @@ tmp/
 
 # Hugo
 .hugo_build.lock
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/

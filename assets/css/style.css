@@ -902,7 +902,10 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 	outline-offset: -2px;
 }
 
-/* Post Container with Sidebar TOC */
+/* Post Container with Sidebar TOC
+   The flex container uses align-items: flex-start to prevent
+   the article from stretching unnecessarily. However, the TOC
+   sidebar needs align-self: stretch for sticky positioning. */
 .post-container {
 	display: flex;
 	gap: 32px;
@@ -917,6 +920,11 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 .post__toc-sidebar {
 	flex: 0 0 280px;
 	order: 2;
+	/* IMPORTANT: align-self: stretch is required for position: sticky to work.
+	   CSS sticky positioning only works when the parent container is taller
+	   than the sticky element. Without stretch, the sidebar height equals
+	   only the TOC content height, leaving no room for the element to "stick". */
+	align-self: stretch;
 }
 
 .toc--sticky {
