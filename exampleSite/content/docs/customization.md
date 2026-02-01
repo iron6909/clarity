@@ -1,8 +1,8 @@
 ---
 title: Customization
-description: Describes common Mainroad theme configuration parameters that can be adjusted via config file or via Front
+description: Describes common Clarity theme configuration parameters that can be adjusted via config file or via Front
   Matter section.
-lead: Describes common Mainroad theme configuration parameters that can be adjusted via config file or via Front Matter
+lead: Describes common Clarity theme configuration parameters that can be adjusted via config file or via Front Matter
   section.
 date: 2022-01-24T14:00:00.000Z
 thumbnail:
@@ -16,7 +16,7 @@ weight: 2
 menu: main
 ---
 
-Customization page describes common Mainroad configuration parameters which can be specified via configuration file or
+Customization page describes common Clarity configuration parameters which can be specified via configuration file or
 via Front Matter section. That includes logo section tuning, adding a sidebar with widgets, adjusting highlight color,
 and more.
 
@@ -27,13 +27,13 @@ there's a good chance it is covered somewhere in [Hugo docs](https://gohugo.io/d
 
 ### Logo
 
-**Mainroad** allows you to set a custom logo in the site header. You may use text, or image, or both. Use the following
+**Clarity** allows you to set a custom logo in the site header. You may use text, or image, or both. Use the following
 options in your site config:
 
 ```toml
 [Params.logo]
   image = "img/placeholder.png"
-  title = "Mainroad"
+  title = "Clarity"
   subtitle = "Just another site"
 ```
 
@@ -55,7 +55,7 @@ Disable it this way:
 
 ### Highlight color
 
-Mainroad uses `#e22d30` as a default highlight color, but you may choose and set any other color.
+Clarity uses `#e22d30` as a default highlight color, but you may choose and set any other color.
 
 ```toml
 [Params.style.vars]
@@ -117,7 +117,7 @@ This page is an example of list-only thumbnail visibility.
 
 ### Sidebar
 
-**Mainroad** comes with a configurable sidebar that can be on the left, on the right, or disabled. The default layout
+**Clarity** comes with a configurable sidebar that can be on the left, on the right, or disabled. The default layout
 can be specified in the `[Params.sidebar]` section of the configuration. The position can be specified for home, list
 and single pages individually. Use the keys `home`, `list` and `single` with values `"left"`, `"right"` or `false`.
 
@@ -228,7 +228,7 @@ generation), then it should not be cached. Always check that your modified/custo
 
 ### Social Widget: custom links
 
-**Mainroad** contains built-in social links in the social widget. In addition to default social links, you may set
+**Clarity** contains built-in social links in the social widget. In addition to default social links, you may set
 custom links by adding `Params.widgets.social.custom` to your `config.toml`. Here is an example:
 
 ```toml
@@ -272,7 +272,7 @@ You can also specify the `rel` attribute for the link. By default, the attribute
 
 ### Search box widget
 
-The search box widget can refer to the results of Google, Bing, and DuckDuckGo searches. By default, Mainroad uses
+The search box widget can refer to the results of Google, Bing, and DuckDuckGo searches. By default, Clarity uses
 Google search if no additional configuration options are specified.
 
 To use a different search engine, first of all, check that the search widget is enabled. Then set the search parameters
@@ -320,11 +320,11 @@ To use a different search engine, first of all, check that the search widget is 
 
 Note that Google PSE requires additional steps to work correctly.
 See [Creating a Programmable Search Engine](https://developers.google.com/custom-search/docs/tutorial/creatingcse) and
-especially our [FAQ]({{< relref "/docs/faq.md" >}} "Mainroad FAQ") for more instructions.
+especially our [FAQ]({{< relref "/docs/faq.md" >}} "Clarity FAQ") for more instructions.
 
 ### Menus
 
-**Mainroad** supports multiple menus. The `main` menu is fully responsive and displayed right under the site header. The
+**Clarity** supports multiple menus. The `main` menu is fully responsive and displayed right under the site header. The
 secondary menus `side` and `footer` are displayed in a sidebar widget and the page footer respectively. To add a page to
 a menu, add a `menu: <menu>` parameter to the page's front matter:
 
@@ -347,13 +347,13 @@ menu:
   - footer
 ```
 
-**Note:** Please keep in mind that Mainroad menus don't support nested items i.e. submenus.
+**Note:** Please keep in mind that Clarity menus don't support nested items i.e. submenus.
 
 See [Menus](https://gohugo.io/content-management/menus/#readout) from official Hugo documentation for more info.
 
 ### Custom Google Fonts support
 
-Mainroad uses Open Sans from Google Fonts as a main font. But you can use any other font from Google Fonts if you'd
+Clarity uses Open Sans from Google Fonts as a main font. But you can use any other font from Google Fonts if you'd
 like. Beware, in most cases, such changes require manual CSS adjustment because every set of fonts is different and
 might not look as good as our default font.
 
@@ -402,4 +402,4 @@ It is possible to disable Google Fonts and use system font stack instead.
       fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
     ```
 
-[Edit this page on GitHub](https://github.com/vimux/mainroad/blob/master/exampleSite/content/docs/customization.md)
+[Edit this page on GitHub](https://github.com/vimux/clarity/blob/master/exampleSite/content/docs/customization.md)

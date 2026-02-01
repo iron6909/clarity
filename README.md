@@ -1,23 +1,27 @@
-# Mainroad
+# Clarity
 
-**Mainroad** is a responsive, simple, clean and content-focused [Hugo](https://gohugo.io/) theme based on the
-[MH Magazine lite](https://wordpress.org/themes/mh-magazine-lite/) theme.
+**Clarity** is a modern, responsive, clean and content-focused [Hugo](https://gohugo.io/) theme with automatic dark mode support and CSS Custom Properties.
 
-**[Demo](https://mainroad-demo.netlify.app/)** • **[Docs](https://mainroad-demo.netlify.app/docs/)**
+> **Based on [Mainroad](https://github.com/Vimux/Mainroad)** by [Vimux](https://github.com/vimux)
+> Clarity is a modernized fork that adds dark mode support, CSS Custom Properties, and removes legacy browser support.
+
+**[Demo](https://clarity-demo.netlify.app/)** • **[Docs](https://clarity-demo.netlify.app/docs/)**
 
 ![screenshot](https://raw.githubusercontent.com/Vimux/Mainroad/master/images/screenshot.png)
 
 **Features:**
 
 + Responsive design
++ **Automatic dark mode** support via `prefers-color-scheme`
++ **CSS Custom Properties** for runtime theme customization
 + Main & secondary menus
 + Widgetized sidebar
 + Translations. Over 15 languages and counting
 + Configurable theme settings (sidebar position, author box, post navigation, highlight color) via `config.toml`
 + Hugo internal templates (Open Graph, Schema, Twitter Cards, Disqus, Google Analytics)
-+ Wide cross-browser compatibility
-  + *Desktop: IE11+, Chrome, Firefox, Safari*
-  + *Mobile: Android browser (on Android 4.4+), Safari (on iOS 7+), Google Chrome, Opera mini*
++ Modern browser compatibility
+  + *Desktop: Chrome 88+, Firefox 78+, Safari 14+, Edge 88+*
+  + *Mobile: Modern Android browsers, Safari (iOS 14+), Chrome Mobile*
 + Custom Google Fonts support, MathJax, Table of Contents, SVG icons and much more…
 
 ## Installation
@@ -25,25 +29,25 @@
 *Before starting, please be sure that you have
 [installed Hugo](https://gohugo.io/getting-started/quick-start/#step-1-install-hugo) and
 [created a new site](https://gohugo.io/getting-started/quick-start/#step-2-create-a-new-site). After that, you are ready
-to install **Mainroad**.*
+to install **Clarity**.*
 
 From your project's root directory, run:
 
-```
-git clone https://github.com/vimux/mainroad.git themes/mainroad
+```bash
+git clone https://github.com/iron6909/clarity.git themes/clarity
 ```
 
 Or, if you don't plan to make any significant changes but want to track and update the theme, you can add it as a git
 submodule via the following command:
 
-```
-git submodule add https://github.com/vimux/mainroad.git themes/mainroad
+```bash
+git submodule add https://github.com/iron6909/clarity.git themes/clarity
 ```
 
-Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `mainroad`:
+Next, open `config.toml` in the base of the Hugo site and ensure the theme option is set to `clarity`:
 
-```
-theme = "mainroad"
+```toml
+theme = "clarity"
 ```
 
 ## Configuration
@@ -52,10 +56,10 @@ theme = "mainroad"
 
 ```toml
 baseurl = "/"
-title = "Mainroad"
+title = "Clarity"
 languageCode = "en-us"
 paginate = "10" # Number of posts per page
-theme = "mainroad"
+theme = "clarity"
 disqusShortname = "" # DEPRECATED! Use .Services.Disqus.Shortname
 googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
 
@@ -94,7 +98,7 @@ googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
   highlightColor = "" # Deprecated in favor of .Site.Params.style.vars.highlightColor
 
 [Params.style.vars]
-  highlightColor = "#e22d30" # Override highlight color
+  highlightColor = "#2563EB" # Override highlight color (default: #2563EB)
 
   # Override font-family sets
   # Take care of different quotes OR escaping symbols in these params if necessary
@@ -104,7 +108,7 @@ googleAnalytics = "" # DEPRECATED! Use .Services.googleAnalytics.ID
 
 [Params.logo]
   image = "img/placeholder.png" # Logo image. Path relative to "static"
-  title = "Mainroad" # Logo title, otherwise will use site title
+  title = "Clarity" # Logo title, otherwise will use site title
   subtitle = "Just another site" # Logo subtitle
 
 [Params.thumbnail]
@@ -194,13 +198,47 @@ widgets: # Enable sidebar widgets in given order per page
 For more information about all available standard front matter variables, please read
 [Hugo Front Matter](https://gohugo.io/content-management/front-matter).
 
+## Dark Mode
+
+The theme automatically supports system-level dark mode preferences. When a user's operating system is set to dark mode, the website will automatically switch to a dark color scheme.
+
+Dark mode uses a carefully designed color palette that ensures:
+- WCAG AA+ contrast ratio compliance
+- Maintains the same visual hierarchy as light mode
+- Accent colors remain readable on dark backgrounds
+
+All colors are defined using CSS Custom Properties, providing a foundation for future runtime theme switching capabilities.
+
+## Documentation
+
+For detailed documentation, please visit the [`docs/`](docs/) directory:
+
+- **[Quick Start Guide](docs/QUICK-START.md)** - Get started in 5 minutes
+- **[Publishing Guide](docs/PUBLISHING-GUIDE.md)** - Complete guide to publishing your theme
+- **[Release Checklist](docs/RELEASE-CHECKLIST.md)** - Pre-release checklist
+- **[Design System](docs/DESIGN-SYSTEM.md)** - Design principles and customization guide
+
+## Credits
+
+Clarity is based on the [Mainroad](https://github.com/Vimux/Mainroad) theme by [Vimux](https://github.com/vimux).
+
+### Major Changes from Mainroad
+
+- ✨ Added automatic dark mode support via `prefers-color-scheme`
+- 🎨 Converted all colors to CSS Custom Properties
+- 🚀 Removed legacy browser support (IE8-11, Safari 6-8)
+- 🧹 Removed outdated vendor prefixes (-webkit-, -ms-, -o-)
+- 📱 Updated browser support to modern browsers (2020+)
+- 🎯 Modernized CSS with standard properties
+
 ## Contributing
 
 Have you found a bug or got an idea for a new feature? Feel free to use the
-[issue tracker](https://github.com/Vimux/mainroad/issues) to let me know. Or make directly a
-[pull request](https://github.com/Vimux/mainroad/pulls), but please respect the following
-[contributing guide](https://github.com/Vimux/mainroad/blob/master/CONTRIBUTING.md).
+[issue tracker](https://github.com/iron6909/clarity/issues) to let me know. Or make directly a
+[pull request](https://github.com/iron6909/clarity/pulls).
 
 ## License
 
-This theme is released under the [GPLv2 license](https://github.com/Vimux/mainroad/blob/master/LICENSE.md).
+This theme is released under the [GPLv2 license](https://github.com/iron6909/clarity/blob/master/LICENSE.md).
+
+Original Mainroad theme: Copyright (C) Vimux - [GPLv2 license](https://github.com/Vimux/Mainroad/blob/master/LICENSE.md)

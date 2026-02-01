@@ -7,29 +7,31 @@ menu: main
 ---
 
 Our website builds with [Hugo](https://gohugo.io/) static site generator and
-[Mainroad](https://github.com/vimux/mainroad) theme. This demo allows you to see what Mainroad based website looks like
+[Clarity](https://github.com/iron6909/clarity) theme. This demo allows you to see what Clarity based website looks like
 before deciding to go with it. Just keep in mind that the current demo shows the basics, a small part of what the
-combination of Hugo and Mainroad can do.
+combination of Hugo and Clarity can do.
 
-## About Mainroad
+## About Clarity
 
-Mainroad is a responsive, simple, clean and content-focused Hugo theme based on the MH Magazine lite WordPress theme.
+Clarity is a modern, responsive Hugo theme with automatic dark mode support and CSS Custom Properties. Based on the popular [Mainroad](https://github.com/Vimux/Mainroad) theme by [Vimux](https://github.com/vimux).
 
 Main features:
 
 * Responsive design
+* **Automatic dark mode** via `prefers-color-scheme`
+* **CSS Custom Properties** for easy customization
 * Main & secondary menus
 * Widgetized sidebar
 * Translations. Over 15 languages and counting
 * Configurable theme settings (sidebar position, author box, post navigation, highlight color) via config.toml
 * Hugo internal templates (Open Graph, Schema, Twitter Cards, Disqus, Google Analytics)
-* Wide cross-browser compatibility
-  * Desktop: IE11+, Chrome, Firefox, Safari
-  * Mobile: Android browser (on Android 4.4+), Safari (on iOS 7+), Google Chrome, Opera mini
+* Modern browser compatibility
+  * Desktop: Chrome 88+, Firefox 78+, Safari 14+, Edge 88+
+  * Mobile: Modern Android browsers, Safari (iOS 14+), Chrome Mobile
 * Custom Google Fonts support, MathJax, Table of Contents, SVG icons and much more…
 
-Learn more on [GitHub](https://github.com/vimux/mainroad). Mainroad theme is released under the
-[GPLv2 license](https://github.com/vimux/mainroad/blob/master/LICENSE.md).
+Learn more on [GitHub](https://github.com/iron6909/clarity). Clarity theme is released under the
+[GPLv2 license](https://github.com/iron6909/clarity/blob/master/LICENSE.md).
 
 ## About Hugo
 

@@ -1,18 +1,15 @@
 baseurl = "/"
-title = "Mainroad"
+title = "Clarity"
 languageCode = "en-us"
-paginate = "10" # Number of posts per page
 theme = "mainroad"
 disqusShortname = "" # Enable comments by entering your Disqus shortname
 googleAnalytics = "" # Enable Google Analytics by entering your tracking id
 
-[Author]
-  name = "John Doe"
-  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
-  avatar = "img/avatar.png"
+[pagination]
+  pagerSize = 10 # Number of posts per page
 
 [Params]
-  description = "John Doe's Personal blog about everything" # Description of your site
+  description = "A modern Hugo theme with dark mode support" # Description of your site
   opengraph = true
   twitter_cards = false
   readmore = false # Show "Read more" button in list if true
@@ -21,8 +18,17 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   post_meta = ["date", "categories"] # Order of post meta information
   mainSections = ["post", "docs"]
 
+[Params.author]
+  name = "John Doe"
+  bio = "John Doe's true identity is unknown. Maybe he is a successful blogger or writer. Nobody knows it."
+  avatar = "img/avatar.png"
+
+[Params.style.vars]
+  highlightColor = "#2563EB" # Blue accent color (minimalist style)
+  fontFamilyPrimary = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+
 [Params.logo]
-  subtitle = "Just another site" # Logo subtitle
+  subtitle = "A minimalist blog" # Logo subtitle
 
 [Params.sidebar]
   home = "right"   # Configure layout for home page

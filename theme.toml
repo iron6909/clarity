@@ -1,19 +1,21 @@
-name = "Mainroad"
+name = "Clarity"
 license = "GPLv2"
-licenselink = "https://github.com/vimux/mainroad/blob/master/LICENSE.md"
-description = "Mainroad is a responsive, clean and content-focused Hugo theme."
-homepage = "https://github.com/vimux/mainroad/"
-demosite = "https://mainroad-demo.netlify.app/"
-tags = ["blog", "responsive", "light", "multilingual", "customizable", "widgets", "wordpress"]
-features = ["blog", "responsive", "multilingual", "widgets", "rss", "disqus", "google analytics", "wordpress"]
+licenselink = "https://github.com/iron6909/clarity/blob/master/LICENSE.md"
+description = "Clarity is a modern, responsive Hugo theme with automatic dark mode support and CSS Custom Properties. Based on Mainroad."
+homepage = "https://github.com/iron6909/clarity/"
+demosite = "https://clarity-demo.netlify.app/"
+tags = ["blog", "responsive", "dark-mode", "light", "multilingual", "customizable", "widgets", "modern", "minimalist"]
+features = ["blog", "responsive", "dark-mode", "multilingual", "widgets", "rss", "disqus", "google analytics", "css-custom-properties"]
 min_version = "0.54.0"
 
 [author]
-  name = "Vimux"
-  homepage = "https://github.com/vimux"
+  name = "iron6909"
+  homepage = "https://github.com/iron6909"
 
-# If porting an existing theme
+# Based on Mainroad theme
 [original]
-  name = "MH Magazine lite"
-  homepage = "https://wordpress.org/themes/mh-magazine-lite/"
-  repo = "https://themes.trac.wordpress.org/browser/mh-magazine-lite/2.5.6"
+  name = "Mainroad"
+  homepage = "https://github.com/Vimux/Mainroad"
+  repo = "https://github.com/Vimux/Mainroad"
+  author = "Vimux"
+

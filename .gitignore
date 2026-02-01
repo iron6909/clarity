@@ -17,3 +17,14 @@ Thumbs.db
 .AppleDouble
 .LSOverride
 Desktop.ini
+
+# dev
+DOCUMENTATION.md
+docs/
+tmp/
+
+# Claude Code
+.claude/
+
+# Hugo
+.hugo_build.lock
