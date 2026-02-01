@@ -954,8 +954,24 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 
 /* Responsive: Hide sidebar TOC on smaller screens */
 @media screen and (max-width: 1023px) {
+	/* CRITICAL FIX: Make primary content full width on tablets
+	   The root cause of content overflow was .primary being constrained to 70%
+	   even on tablets. With 768px screen width:
+	   - (768 - 64px padding) * 0.7 = ~493px for .primary
+	   - After 32px gap: ~461px for .post--with-sidebar
+	   - Code blocks need 600-800px, causing overflow
+	   Solution: Make .primary 100% width on tablets */
+	.primary {
+		flex: 1 0 100%;
+	}
+
 	.post-container {
 		flex-direction: column;
+	}
+
+	.post--with-sidebar {
+		width: 100%;
+		max-width: 100%;
 	}
 
 	.post__toc-sidebar {
@@ -972,19 +988,19 @@ button:not(:-moz-focusring):focus > .menu__btn-title {
 		margin-bottom: 24px;
 	}
 
-	/* Fix content overflow on tablets */
+	/* Fix content overflow on tablets (last line of defense) */
 	.post__content,
 	.content {
 		max-width: 100%;
 		overflow-x: auto;
-		word-wrap: break-word;
+		overflow-wrap: break-word;
 	}
 
 	/* Fix code block overflow on tablets */
 	pre {
 		max-width: 100%;
 		overflow-x: auto;
-		word-break: break-word;
+		word-break: break-all;
 		white-space: pre-wrap;
 	}
 
