@@ -67,11 +67,6 @@ googleAnalytics = "" # 已弃用！请使用 .Services.googleAnalytics.ID
 [services.googleAnalytics]
   ID = "" # 输入你的跟踪 ID 以启用 Google Analytics
 
-[Author] # 用于作者信息框
-  name = "张三"
-  bio = "张三的真实身份不详。也许他是一位成功的博主或作家。没人知道。"
-  avatar = "img/avatar.png"
-
 [Params]
   description = "张三的个人博客" # 网站描述，用于 meta description
   copyright = "张三" # 页脚版权持有者，否则将使用网站标题
@@ -91,6 +86,11 @@ googleAnalytics = "" # 已弃用！请使用 .Services.googleAnalytics.ID
   googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # 加载 Google 字体
   customCSS = ["css/custom.css"] # 包含自定义 CSS 文件
   customJS = ["js/custom.js"] # 包含自定义 JS 文件
+
+[Params.author]
+  name = "张三"
+  bio = "张三的真实身份不详。也许他是一位成功的博主或作家。没人知道。"
+  avatar = "img/avatar.png"
 
   # 已弃用的参数
   subtitle = "" # 已弃用，请使用 .Site.Params.logo.subtitle
