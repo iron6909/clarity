@@ -5,9 +5,9 @@
 > **基于 [Mainroad](https://github.com/Vimux/Mainroad)** 由 [Vimux](https://github.com/vimux) 开发
 > Clarity 是一个现代化的分支版本，添加了暗色模式支持、CSS 自定义属性，并移除了旧版浏览器支持。
 
-**[在线演示](https://clarity-demo.netlify.app/)** • **[文档](https://clarity-demo.netlify.app/docs/)**
+**[在线演示](https://iron6909.github.io/clarity/)** • **[文档](https://iron6909.github.io/clarity/docs/)**
 
-![screenshot](https://raw.githubusercontent.com/Vimux/Mainroad/master/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/iron6909/clarity/main/images/screenshot.png)
 
 **特性：**
 

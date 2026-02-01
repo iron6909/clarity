@@ -5,7 +5,7 @@
 > **Based on [Mainroad](https://github.com/Vimux/Mainroad)** by [Vimux](https://github.com/vimux)
 > Clarity is a modernized fork that adds dark mode support, CSS Custom Properties, and removes legacy browser support.
 
-**[Demo](https://clarity-demo.netlify.app/)** • **[Docs](https://clarity-demo.netlify.app/docs/)**
+**[Demo](https://iron6909.github.io/clarity/)** • **[Docs](https://iron6909.github.io/clarity/docs/)**
 
 ![screenshot](https://raw.githubusercontent.com/iron6909/clarity/main/images/screenshot.png)
 
