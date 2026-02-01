@@ -1,5 +1,7 @@
 # Clarity
 
+English | [简体中文](README.zh-CN.md)
+
 **Clarity** is a modern, responsive, clean and content-focused [Hugo](https://gohugo.io/) theme with automatic dark mode support and CSS Custom Properties.
 
 > **Based on [Mainroad](https://github.com/Vimux/Mainroad)** by [Vimux](https://github.com/vimux)

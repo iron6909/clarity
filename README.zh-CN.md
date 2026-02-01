@@ -1,6 +1,8 @@
 # Clarity
 
-**Clarity** 是一个现代化、响应式、简洁且专注内容的 [Hugo](https://gohugo.io/) 主题，支持自动暗色模式和 CSS 自定义属性。
+[English](README.md) | 简体中文
+
+**Clarity** 是一个现代化、响应式、简洁且专注内容的 [Hugo](https://gohugo.io/) 主题，支持自动暗色模式和 CSS 自定义属性.
 
 > **基于 [Mainroad](https://github.com/Vimux/Mainroad)** 由 [Vimux](https://github.com/vimux) 开发
 > Clarity 是一个现代化的分支版本，添加了暗色模式支持、CSS 自定义属性，并移除了旧版浏览器支持。
