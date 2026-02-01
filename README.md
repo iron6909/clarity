@@ -7,7 +7,7 @@
 
 **[Demo](https://clarity-demo.netlify.app/)** • **[Docs](https://clarity-demo.netlify.app/docs/)**
 
-![screenshot](https://raw.githubusercontent.com/Vimux/Mainroad/master/images/screenshot.png)
+![screenshot](https://raw.githubusercontent.com/iron6909/clarity/main/images/screenshot.png)
 
 **Features:**
 
