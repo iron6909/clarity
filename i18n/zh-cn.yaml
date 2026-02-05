@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "菜单"
 
+- id: back_to_top
+  translation: "回到顶部"
+
 - id: sidemenu_title
   translation: "菜单"
 

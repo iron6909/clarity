@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Menu"
 
+- id: back_to_top
+  translation: "Lên đầu trang"
+
 - id: sidemenu_title
   translation: "Menu"
 

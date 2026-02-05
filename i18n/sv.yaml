@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Meny"
 
+- id: back_to_top
+  translation: "Till toppen"
+
 - id: sidemenu_title
   translation: "Meny"
 

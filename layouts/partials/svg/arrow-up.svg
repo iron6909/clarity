@@ -1,0 +1,1 @@
+<svg class="{{ with .class }}{{ . }} {{ end }}icon icon-arrow-up" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M8 3l5 5-1.06 1.06L8.75 5.75V13h-1.5V5.75L4.06 9.06 3 8z"/></svg>

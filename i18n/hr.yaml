@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Meni"
 
+- id: back_to_top
+  translation: "Natrag na vrh"
+
 - id: sidemenu_title
   translation: "Meni"
 

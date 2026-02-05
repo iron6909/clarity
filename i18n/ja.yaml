@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "メニュー"
 
+- id: back_to_top
+  translation: "トップへ戻る"
+
 - id: sidemenu_title
   translation: "メニュー"
 

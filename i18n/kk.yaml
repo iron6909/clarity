@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Мәзір"
 
+- id: back_to_top
+  translation: "Жоғарыға"
+
 - id: sidemenu_title
   translation: "Мәзір"
 

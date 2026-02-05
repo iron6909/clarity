@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Мени"
 
+- id: back_to_top
+  translation: "Кон горе"
+
 - id: sidemenu_title
   translation: "Мени"
 

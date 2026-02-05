@@ -5,6 +5,9 @@
 - id: menu_label
   translation: "Valikko"
 
+- id: back_to_top
+  translation: "Takaisin ylös"
+
 - id: sidemenu_title
   translation: "Valikko"
 
