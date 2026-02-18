@@ -1,0 +1,12 @@
+{{- /* Related posts (Hugo related content). Shown on single pages when enabled. */ -}}
+{{- $related := .Site.RegularPages.Related . | first 6 -}}
+{{- if $related -}}
+<section class="post__related related">
+	<h2 class="related__title">相关文章</h2>
+	<ul class="related__list">
+		{{- range $related -}}
+		<li class="related__item"><a class="related__link" href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		{{- end -}}
+	</ul>
+</section>
+{{- end -}}
