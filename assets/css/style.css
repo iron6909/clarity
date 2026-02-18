@@ -1603,3 +1603,21 @@ textarea {
 		transition-duration: 0.01ms !important;
 	}
 }
+
+/* Related posts */
+.related {
+	margin-top: 1.5rem;
+	padding-top: 1rem;
+	border-top: 1px solid #e5e7eb;
+}
+.related__title {
+	margin: 0 0 .5rem 0;
+	font-size: 1.1rem;
+}
+.related__list {
+	margin: 0;
+	padding-left: 1.1rem;
+}
+.related__item {
+	margin: .25rem 0;
+}
