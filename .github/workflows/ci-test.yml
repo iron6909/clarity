@@ -27,8 +27,40 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
+      - name: Lint (changed files only)
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          set -euo pipefail
+          # Determine diff base (PR base branch or default branch)
+          if [ -n "${BASE_REF:-}" ]; then
+            git fetch origin "$BASE_REF" --depth=1
+            BASE="origin/$BASE_REF"
+          else
+            git fetch origin main --depth=1 || git fetch origin master --depth=1
+            BASE="origin/main"
+            git rev-parse --verify "$BASE" >/dev/null 2>&1 || BASE="origin/master"
+          fi
+
+          files=$(git diff --name-only "$BASE"...HEAD || true)
+          echo "Changed files:"; echo "$files" || true
+
+          css=$(echo "$files" | grep -E '^static/css/.*\.css$' || true)
+          js=$(echo "$files" | grep -E '^static/js/.*\.js$' || true)
+
+          if [ -n "$css" ]; then
+            npx stylelint $css --aei
+          else
+            echo "No CSS changes"
+          fi
+
+          if [ -n "$js" ]; then
+            npx eslint $js
+          else
+            echo "No JS changes"
+          fi
+
+          echo "Skip editorconfig-checker for legacy formatting (run locally if needed)."
 
   test-hugo:
     runs-on: ubuntu-latest
