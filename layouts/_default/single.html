@@ -20,11 +20,9 @@
 		</article>
 		{{- partial "post_toc.html" . -}}
 	</div>
-	{{- if eq .Section "post" }}
 	<button class="back-to-top btn" type="button" aria-label="{{ T "back_to_top" }}" title="{{ T "back_to_top" }}">
 		{{ partial "svg/arrow-up.svg" (dict "class" "back-to-top__icon") -}}
 	</button>
-	{{- end }}
 </main>
 {{ partial "authorbox.html" . }}
 {{ partial "pager.html" . }}

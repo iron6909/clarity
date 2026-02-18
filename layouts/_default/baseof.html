@@ -65,7 +65,7 @@
 		{{ block "footer" . }}{{ partial "footer.html" . }}{{ end }}
 	</div>
 <script async defer src="{{ "js/menu.js" | relURL }}"></script>
-{{- if and .IsPage (eq .Section "post") }}
+{{- if .IsPage }}
 <script async defer src="{{ "js/back-to-top.js" | relURL }}"></script>
 {{- end }}
 {{ range .Site.Params.customJS -}}
