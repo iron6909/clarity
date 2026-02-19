@@ -1,0 +1,36 @@
+<div class="search-page">
+	<form class="search-page__form" role="search" onsubmit="return false">
+		<label class="search-page__label" for="search-input">站内搜索</label>
+		<input id="search-input" class="search-page__input" type="search" placeholder="输入关键词…" aria-label="站内搜索" autocomplete="off" />
+		<div class="search-page__hint">提示：支持中文/英文；结果来自本站静态索引。</div>
+	</form>
+	<div id="search-results" class="search-page__results" aria-live="polite"></div>
+</div>
+
+<script defer src="{{ "js/pagefind-ui.js" | relURL }}"></script>
+<script>
+	(function(){
+		function init(){
+			if (!window.PagefindUI) {
+				return;
+			}
+			new PagefindUI({
+				element: "#search-results",
+				showSubResults: true,
+				highlightParam: "highlight",
+				translations: {
+					placeholder: "输入关键词…",
+					search_label: "站内搜索",
+					zero_results: "没有找到结果",
+					many_results: "找到 {n} 条结果",
+					one_result: "找到 1 条结果"
+				}
+			});
+		}
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', init);
+		} else {
+			init();
+		}
+	})();
+</script>
