@@ -1647,3 +1647,10 @@ textarea {
 .search-page__results {
 	margin-top: 1rem;
 }
+
+/* Search widget hint */
+.widget-search__hint {
+	margin-top: .5rem;
+	font-size: .9rem;
+	color: #6b7280;
+}
