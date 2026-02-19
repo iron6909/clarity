@@ -1,3 +1,29 @@
+{{- /*
+Widget: Site search
+
+Default behavior: local search page at /search/.
+
+If you prefer external search engines, configure:
+
+[params.widgets.search]
+  url = "https://duckduckgo.com/"  # or google/bing
+  [params.widgets.search.input]
+    name = "sites"                # engine-specific
+    pre = ""                      # optional prefix
+
+*/ -}}
+
+{{- $mode := .Site.Params.widgets.search.mode | default "local" -}}
+
+{{- if eq $mode "local" -}}
+<div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="{{ "/search/" | relURL }}">
+		<input class="widget-search__field" type="search" placeholder="{{ T "search_placeholder" }}" value="" name="q" aria-label="{{ T "search_placeholder" }}">
+		<input class="widget-search__submit" type="submit" value="Search">
+	</form>
+	<div class="widget-search__hint"><a href="{{ "/search/" | relURL }}">站内搜索</a></div>
+</div>
+{{- else -}}
 {{- $actionURL := .Site.Params.widgets.search.url | default "https://google.com/search" -}}
 {{- $inputName := .Site.Params.widgets.search.input.name | default "sitesearch" -}}
 {{- $inputPre := .Site.Params.widgets.search.input.pre -}}
@@ -9,3 +35,4 @@
 		{{ if $inputName -}}<input type="hidden" name="{{ $inputName }}" value="{{ $inputPre }}{{ .Site.BaseURL }}">{{- end }}
 	</form>
 </div>
+{{- end -}}
