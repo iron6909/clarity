@@ -1,0 +1,14 @@
+{{ define "main" }}
+<main class="main" role="main">
+	<div class="post-container">
+		<article class="post post--with-sidebar">
+			<header class="post__header">
+				<h1 class="post__title">{{ .Title }}</h1>
+			</header>
+			<div class="content post__content clearfix">
+				{{ partial "search.html" . }}
+			</div>
+		</article>
+	</div>
+</main>
+{{ end }}
