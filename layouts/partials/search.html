@@ -10,10 +10,26 @@
 <script defer src="{{ "js/pagefind-ui.js" | relURL }}"></script>
 <script>
 	(function(){
-		function init(){
-			if (!window.PagefindUI) {
-				return;
+		function getQueryParam(name){
+			try {
+				const u = new URL(window.location.href);
+				return u.searchParams.get(name) || '';
+			} catch(e) {
+				return '';
 			}
+		}
+
+		function triggerSearch(v){
+			// Pagefind UI renders its own input; try to find it and set value.
+			const uiInput = document.querySelector('#search-results input[type="search"], #search-results input[type="text"]');
+			if (uiInput) {
+				uiInput.value = v;
+				uiInput.dispatchEvent(new Event('input', { bubbles: true }));
+			}
+		}
+
+		function init(){
+			if (!window.PagefindUI) return false;
 			new PagefindUI({
 				element: "#search-results",
 				showSubResults: true,
@@ -26,11 +42,27 @@
 					one_result: "找到 1 条结果"
 				}
 			});
+
+			const q = getQueryParam('q').trim();
+			if (q) {
+				// give UI a tick to mount input
+				setTimeout(() => triggerSearch(q), 50);
+			}
+			return true;
 		}
+
+		function boot(){
+			let tries = 0;
+			const timer = setInterval(() => {
+				tries += 1;
+				if (init() || tries > 80) clearInterval(timer);
+			}, 50);
+		}
+
 		if (document.readyState === 'loading') {
-			document.addEventListener('DOMContentLoaded', init);
+			document.addEventListener('DOMContentLoaded', boot);
 		} else {
-			init();
+			boot();
 		}
 	})();
 </script>
