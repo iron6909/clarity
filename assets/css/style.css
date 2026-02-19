@@ -1621,3 +1621,29 @@ textarea {
 .related__item {
 	margin: .25rem 0;
 }
+
+/* Search page (Pagefind UI wrapper) */
+.search-page__label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: .5rem;
+}
+.search-page__input {
+	width: 100%;
+	max-width: 720px;
+	padding: .65rem .8rem;
+	border: 1px solid #d1d5db;
+	border-radius: .6rem;
+}
+.search-page__input:focus-visible {
+	outline: 2px solid rgba(37, 99, 235, .35);
+	outline-offset: 2px;
+}
+.search-page__hint {
+	color: #6b7280;
+	font-size: .9rem;
+	margin-top: .5rem;
+}
+.search-page__results {
+	margin-top: 1rem;
+}
